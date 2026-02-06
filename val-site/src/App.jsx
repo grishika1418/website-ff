@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import LandingPage from './pages/LandingPage.jsx'
 import ValentineDaysPage from './pages/ValentineDaysPage.jsx'
 import DayDetailPage from './pages/DayDetailPage.jsx'
@@ -7,39 +7,22 @@ import GalleryUsPage from './pages/GalleryUsPage.jsx'
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#fef9f7] text-[#381217] font-body">
+    <div className="min-h-screen w-full bg-[#fef9f7] relative text-[#381217] font-body">
+      {/* Aurora Dream Corner Whispers */}
       <div
-        className="fixed inset-0 -z-10"
+        className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `
-            radial-gradient(circle at 20% 80%, rgba(255, 160, 146, 0.25) 0%, transparent 50%),
-            radial-gradient(circle at 80% 20%, rgba(255, 244, 228, 0.3) 0%, transparent 50%),
-            radial-gradient(circle at 40% 40%, rgba(255, 160, 146, 0.15) 0%, transparent 50%)
-          `,
+          background: `
+          radial-gradient(ellipse 85% 65% at 8% 8%, rgba(213, 184, 248, 0.42), transparent 60%),
+            radial-gradient(ellipse 75% 60% at 75% 35%, rgba(255, 235, 170, 0.55), transparent 62%),
+            radial-gradient(ellipse 70% 60% at 15% 80%, rgba(255, 100, 180, 0.40), transparent 62%),
+            radial-gradient(ellipse 70% 60% at 92% 92%, rgba(120, 190, 255, 0.45), transparent 62%),
+            linear-gradient(180deg, #f7eaff 0%, #fde2ea 100%)
+        `,
         }}
       />
 
-      <header className="px-6 py-4 flex items-center justify-between max-w-5xl mx-auto">
-        <Link to="/" className="flex items-center gap-2 text-sm font-medium text-rose-700">
-          <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-rose-100 text-lg">
-            💌
-          </span>
-          <span className="tracking-wide uppercase text-xs text-rose-600/90">
-            for my valentine
-          </span>
-        </Link>
-
-        <nav className="flex items-center gap-4 text-xs sm:text-sm text-rose-700/90">
-          <Link to="/days" className="hover:text-rose-900 transition-colors">
-            7 days of love
-          </Link>
-          <Link to="/gallery/us" className="hover:text-rose-900 transition-colors">
-            our gallery
-          </Link>
-        </nav>
-      </header>
-
-      <main className="px-4 pb-10 pt-2 sm:pt-4">
+      <main className="relative z-10 px-4 pb-10 pt-2 sm:pt-4">
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/days" element={<ValentineDaysPage />} />

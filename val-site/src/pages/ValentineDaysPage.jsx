@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 const year = new Date().getFullYear()
 
@@ -101,22 +101,42 @@ function ValentineDaysPage() {
   const navigate = useNavigate()
 
   return (
-    <div className="max-w-4xl mx-auto mt-4 sm:mt-6 space-y-6">
-      <section className="rounded-3xl bg-white/85 backdrop-blur border border-rose-100 px-5 py-6 sm:px-8 sm:py-7 shadow-[0_16px_50px_rgba(148,27,56,0.18)]">
-        <p className="text-xs font-medium uppercase tracking-[0.26em] text-rose-400 mb-2">
-          7 days + 1 finale
-        </p>
-        <h2 className="font-display text-2xl sm:text-3xl text-rose-900">
-          A little countdown to us
-        </h2>
-        <p className="mt-2 text-sm sm:text-base text-rose-700/95 max-w-2xl">
-          Every day from Rose Day to Valentine&apos;s has its own tiny universe
-          here—notes, memories, and soft little surprises. Some might be
-          unlocked already, others are still patiently waiting for their day.
-        </p>
-      </section>
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
+      {/* Back arrow */}
+      <Link
+        to="/"
+        className="inline-flex items-center gap-2 mb-4 sm:mb-6 text-sm text-rose-600 hover:text-rose-800 transition-colors"
+      >
+        <svg
+          className="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+        <span>Back</span>
+      </Link>
 
-      <section className="grid gap-4 sm:gap-5 md:grid-cols-2">
+      <div className="space-y-5 sm:space-y-6">
+        <section className="rounded-xl bg-white/70 backdrop-blur-sm border border-rose-200/40 px-5 py-5 sm:px-7 sm:py-6">
+          <p className="text-xs font-medium uppercase tracking-[0.26em] text-rose-400/80 mb-2">
+            7 days + 1 finale
+          </p>
+          <h2 className="font-display text-2xl sm:text-3xl text-rose-900">
+            A little countdown
+          </h2>
+          <p className="mt-2 text-sm sm:text-base text-rose-700/90 max-w-2xl">
+            Every day has its own tiny universe, some are unlocked while others are waiting for their day.
+          </p>
+        </section>
+
+        <section className="grid gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3">
         {daysConfig.map((day) => {
           const isUnlocked = new Date(day.unlockAt) <= now
           const timeUntil = isUnlocked ? null : getTimeUntil(day.unlockAt)
@@ -130,58 +150,50 @@ function ValentineDaysPage() {
                   navigate(`/days/${day.id}`)
                 }
               }}
-              className={`group relative overflow-hidden rounded-3xl border px-4 py-4 sm:px-5 sm:py-5 text-left transition-all duration-200 ${
+              className={`group relative overflow-hidden rounded-xl border px-4 py-3.5 sm:px-4 sm:py-4 text-left transition-colors duration-200 ${
                 isUnlocked
-                  ? 'border-rose-100 bg-white/85 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(190,24,93,0.28)]'
-                  : 'border-rose-100/70 bg-rose-50/70 opacity-90 cursor-default'
+                  ? 'border-rose-200/30 bg-white/70 hover:bg-white/85 hover:border-rose-200/50'
+                  : 'border-rose-200/25 bg-rose-50/40 opacity-75 cursor-default'
               }`}
             >
-              <div className="absolute inset-0 pointer-events-none opacity-70">
-                {day.mood === 'soft' && (
-                  <div className="h-full w-full bg-[radial-gradient(circle_at_0%_0%,rgba(255,214,214,0.6),transparent_60%),radial-gradient(circle_at_100%_100%,rgba(255,244,228,0.8),transparent_60%)]" />
-                )}
-                {day.mood === 'bold' && (
-                  <div className="h-full w-full bg-[radial-gradient(circle_at_0%_50%,rgba(254,202,202,0.6),transparent_60%),radial-gradient(circle_at_100%_0%,rgba(252,231,243,0.8),transparent_60%)]" />
-                )}
-              </div>
-
-              <div className="relative z-10 flex items-start gap-3">
-                <div className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-2xl bg-white/80 border border-rose-100 shadow-sm text-lg">
+              <div className="relative z-10 flex items-start gap-2.5 sm:gap-3">
+                <div className="mt-0.5 flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-lg bg-white/90 border border-rose-200/30 text-base sm:text-lg flex-shrink-0">
                   {day.id === 'valentines-day' ? '💘' : '🌹'}
                 </div>
 
-                <div className="flex-1 space-y-1">
-                  <div className="flex items-center justify-between gap-2">
-                    <h3 className="font-display text-base sm:text-lg font-semibold text-rose-900">
+                <div className="flex-1 min-w-0 space-y-1">
+                  <div className="flex items-start justify-between gap-2">
+                    <h3 className="font-display text-sm sm:text-base font-semibold text-rose-900 leading-tight">
                       {day.label}
                     </h3>
-                    <span className="text-[11px] font-medium uppercase tracking-[0.18em] text-rose-400">
+                    <span className="text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.15em] text-rose-400/80 whitespace-nowrap flex-shrink-0">
                       {day.dateLabel}
                     </span>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-rose-700/95">
+                  <p className="text-xs sm:text-sm text-rose-700/90 leading-relaxed">
                     {day.preview}
                   </p>
 
-                  <div className="pt-1.5 flex items-center justify-between text-[11px] text-rose-500">
+                  <div className="pt-1 flex items-center justify-between text-[10px] sm:text-[11px] text-rose-500/90">
                     {isUnlocked ? (
                       <>
                         <span className="inline-flex items-center gap-1">
                           <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                          ready to open
+                          <span className="hidden sm:inline">ready to open</span>
+                          <span className="sm:hidden">ready</span>
                         </span>
-                        <span className="group-hover:text-rose-700 group-hover:underline">
-                          tap to enter
+                        <span className="group-hover:text-rose-700 transition-colors">
+                          tap →
                         </span>
                       </>
                     ) : (
                       <>
                         <span className="inline-flex items-center gap-1">
                           <span className="h-1.5 w-1.5 rounded-full bg-rose-300" />
-                          locked for now
+                          <span className="hidden sm:inline">locked</span>
                         </span>
-                        <span>{timeUntil}</span>
+                        <span className="text-rose-400/80">{timeUntil}</span>
                       </>
                     )}
                   </div>
@@ -190,7 +202,8 @@ function ValentineDaysPage() {
             </button>
           )
         })}
-      </section>
+        </section>
+      </div>
     </div>
   )
 }

@@ -154,12 +154,12 @@ function DayDetailPage() {
       <button
         type="button"
         onClick={() => navigate('/days')}
-        className="inline-flex items-center gap-1 rounded-full border border-rose-100 bg-white/80 px-3 py-1.5 text-xs text-rose-600 hover:bg-rose-50/80"
+        className="inline-flex items-center gap-1 rounded-full border border-rose-200/50 bg-white/90 px-3 py-1.5 text-xs text-rose-600 hover:bg-rose-50/90 transition-colors"
       >
         ← back to the 7 days
       </button>
 
-      <section className="relative overflow-hidden rounded-3xl bg-white/90 backdrop-blur border border-rose-100 px-5 py-6 sm:px-7 sm:py-7 shadow-[0_18px_55px_rgba(148,27,56,0.22)]">
+      <section className="relative overflow-hidden rounded-2xl bg-white/70 backdrop-blur-sm border border-rose-200/50 px-5 py-6 sm:px-7 sm:py-7">
         <div className="pointer-events-none absolute inset-0 opacity-70">
           <div className="h-full w-full bg-[radial-gradient(circle_at_0%_0%,rgba(255,214,214,0.65),transparent_60%),radial-gradient(circle_at_100%_100%,rgba(255,244,228,0.9),transparent_60%)]" />
         </div>
@@ -167,7 +167,7 @@ function DayDetailPage() {
         <div className="relative z-10 space-y-3">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <div className="flex items-center gap-3">
-              <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-white/80 border border-rose-100 shadow-sm text-lg">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-white/90 border border-rose-200/50 text-lg">
                 {dayId === 'valentines-day' ? '💘' : '🌹'}
               </div>
               <div>
@@ -182,12 +182,12 @@ function DayDetailPage() {
 
             <div className="text-right text-[11px] text-rose-600">
               {isUnlocked ? (
-                <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50/80 px-2 py-1 text-[10px] font-semibold text-emerald-700 border border-emerald-100">
+                <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50/70 px-2 py-1 text-[10px] font-semibold text-emerald-700 border border-emerald-200/50">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
                   this page is open
                 </span>
               ) : (
-                <span className="inline-flex items-center gap-1 rounded-full bg-rose-50/80 px-2 py-1 text-[10px] font-semibold text-rose-600 border border-rose-100">
+                <span className="inline-flex items-center gap-1 rounded-full bg-rose-50/70 px-2 py-1 text-[10px] font-semibold text-rose-600 border border-rose-200/50">
                   <span className="h-1.5 w-1.5 rounded-full bg-rose-400" />
                   locked for now • {timeUntil}
                 </span>
@@ -216,7 +216,7 @@ function DayDetailPage() {
           </div>
 
           {detail.isFinale && (
-            <div className="mt-5 border-t border-rose-100/70 pt-4">
+            <div className="mt-5 border-t border-rose-200/40 pt-4">
               <p className="text-xs uppercase tracking-[0.26em] text-rose-400 mb-2">
                 finale extras
               </p>
@@ -229,11 +229,10 @@ function DayDetailPage() {
               <div className="grid gap-3 sm:grid-cols-2">
                 <Link
                   to="/gallery/you"
-                  className="group relative overflow-hidden rounded-2xl border border-rose-100 bg-rose-50/80 px-4 py-3 text-sm text-rose-800 hover:-translate-y-0.5 hover:shadow-[0_10px_25px_rgba(190,24,93,0.25)] transition-all duration-200"
+                  className="group relative overflow-hidden rounded-xl border border-rose-200/50 bg-rose-50/60 px-4 py-3 text-sm text-rose-800 hover:bg-rose-50/80 transition-colors duration-200"
                 >
-                  <div className="absolute inset-0 opacity-60 pointer-events-none bg-[radial-gradient(circle_at_0%_0%,rgba(253,242,248,0.9),transparent_60%),radial-gradient(circle_at_100%_100%,rgba(254,242,242,0.9),transparent_60%)]" />
                   <div className="relative z-10 flex items-center gap-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-white/80 border border-rose-100 shadow-sm text-lg">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/90 border border-rose-200/50 text-lg">
                       ✨
                     </div>
                     <div>
@@ -250,11 +249,10 @@ function DayDetailPage() {
 
                 <Link
                   to="/gallery/us"
-                  className="group relative overflow-hidden rounded-2xl border border-rose-100 bg-white/85 px-4 py-3 text-sm text-rose-800 hover:-translate-y-0.5 hover:shadow-[0_10px_25px_rgba(190,24,93,0.25)] transition-all duration-200"
+                  className="group relative overflow-hidden rounded-xl border border-rose-200/50 bg-white/70 px-4 py-3 text-sm text-rose-800 hover:bg-white/90 transition-colors duration-200"
                 >
-                  <div className="absolute inset-0 opacity-70 pointer-events-none bg-[radial-gradient(circle_at_10%_0%,rgba(255,228,230,0.8),transparent_60%),radial-gradient(circle_at_100%_100%,rgba(255,247,237,0.9),transparent_60%)]" />
                   <div className="relative z-10 flex items-center gap-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-white/80 border border-rose-100 shadow-sm text-lg">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/90 border border-rose-200/50 text-lg">
                       📸
                     </div>
                     <div>

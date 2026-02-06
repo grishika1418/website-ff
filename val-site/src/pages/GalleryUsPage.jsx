@@ -51,7 +51,7 @@ function GalleryUsPage() {
         {placeholderUsPhotos.map((photo) => (
           <div
             key={photo.id}
-            className="group relative overflow-hidden rounded-3xl border border-rose-100 bg-white/85 shadow-[0_12px_35px_rgba(148,27,56,0.18)] transition-transform duration-200 hover:-translate-y-1"
+            className="group relative overflow-hidden rounded-2xl border border-rose-200/50 bg-white/70 transition-colors duration-200 hover:bg-white/80"
           >
             <div className="aspect-[4/5] bg-gradient-to-br from-rose-100/90 via-rose-50/90 to-sky-50/90 flex items-center justify-center text-4xl">
               <span className="select-none">📸</span>
