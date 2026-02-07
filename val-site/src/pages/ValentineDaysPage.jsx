@@ -20,7 +20,7 @@ const daysConfig = [
     dateLabel: `8 Feb ${year}`,
     unlockAt: new Date(year, 1, 8, 0, 0, 0).toISOString(),
     mood: 'bold',
-    preview: 'The official “no backsies” question, properly documented.',
+    preview: 'The official question for you, from me.',
   },
   {
     id: 'chocolate-day',
@@ -29,7 +29,7 @@ const daysConfig = [
     dateLabel: `9 Feb ${year}`,
     unlockAt: new Date(year, 1, 9, 0, 0, 0).toISOString(),
     mood: 'sweet',
-    preview: 'Sticky sweet, slightly chaotic, exactly like us.',
+    preview: 'A sweet day, exactly like you.',
   },
   {
     id: 'teddy-day',
@@ -38,7 +38,7 @@ const daysConfig = [
     dateLabel: `10 Feb ${year}`,
     unlockAt: new Date(year, 1, 10, 0, 0, 0).toISOString(),
     mood: 'soft',
-    preview: 'Evidence that you are, in fact, the softest teddy.',
+    preview: 'You are in fact the softest teddy ever.',
   },
   {
     id: 'promise-day',
@@ -47,7 +47,7 @@ const daysConfig = [
     dateLabel: `11 Feb ${year}`,
     unlockAt: new Date(year, 1, 11, 0, 0, 0).toISOString(),
     mood: 'warm',
-    preview: 'Tiny, specific promises that quietly mean everything.',
+    preview: 'Promises that mean everything to you.',
   },
   {
     id: 'hug-day',
@@ -56,7 +56,7 @@ const daysConfig = [
     dateLabel: `12 Feb ${year}`,
     unlockAt: new Date(year, 1, 12, 0, 0, 0).toISOString(),
     mood: 'safe',
-    preview: 'All the ways you feel like home, in one place.',
+    preview: 'The way you make me feel like home.',
   },
   {
     id: 'kiss-day',
@@ -65,7 +65,7 @@ const daysConfig = [
     dateLabel: `13 Feb ${year}`,
     unlockAt: new Date(year, 1, 13, 0, 0, 0).toISOString(),
     mood: 'spark',
-    preview: 'Soft, electric, and extremely us-coded.',
+    preview: 'ummmahhhhhh babyy',
   },
   {
     id: 'valentines-day',
@@ -75,7 +75,7 @@ const daysConfig = [
     unlockAt: new Date(year, 1, 14, 0, 0, 0).toISOString(),
     mood: 'finale',
     preview:
-      'The big one—with words, memories, and a secret little gallery.',
+      'The one with words and a little gallery.',
   },
 ]
 

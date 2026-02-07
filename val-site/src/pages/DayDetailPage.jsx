@@ -10,11 +10,11 @@ const dayDetails = {
     dateLabel: `7 Feb ${year}`,
     unlockAt: new Date(year, 1, 7, 0, 0, 0).toISOString(),
     intro:
-      'Today is for roses—real ones, digital ones, and all the ways you quietly make the world feel softer.',
+      'Today is for roses— all the ways you quietly make my world feel softer.',
     content: [
-      'Here you can write about the very first “rose moment” that made you look at her differently.',
-      'Add little bullet points of things you adore about her—how she laughs, how she texts, the way she says your name.',
-      'You can also paste in a tiny poem or a screenshot of a moment that felt like someone handing you a flower.',
+      'Happy Rose Day bebuuuu. I just want to write about how i feel about you and how much you mean to me. Comparing you to a rose is silly i know because you are just more beautiful than a rose. But i wanted to start with this because you are the most beautiful thing in my life. ',
+      'I just want you to be happy and i want to make you happy & just let you know that you are so special to me. You are very much adored just like how ppl look at a rose :P',
+      'Anyways, moving forward- this whole thing is NOT serious!!!(or may be a lil bit serious hehehe)'
     ],
     images: ['/images/pics-days/rose.png'],
   },
@@ -24,11 +24,12 @@ const dayDetails = {
     dateLabel: `8 Feb ${year}`,
     unlockAt: new Date(year, 1, 8, 0, 0, 0).toISOString(),
     intro:
-      'The day the question stopped living only in your head and started living in the world.',
+      'The day everything started getting in to my head.',
     content: [
-      'Describe how you imagined asking her, versus how it actually happened (or how you want it to happen).',
-      'Write down the exact words you never want to forget, even if they only live here.',
-      'Use this as a space to confess something soft, brave, and very you-coded.',
+      'Babyyyyyyy.... i LOVE YOUUUU',
+      'I love you i love you il love you soooo much babyy. I never wanted to admit it but i am really scared, scared that i might loose you one day???',
+      'I just love you bebuuuu... i feel like everything in my life started from the day i met you.',
+      'Soooo... will you be my BABY?? baby hehehe'
     ],
     images: ['/images/pics-days/propose.png'],
   },
@@ -38,11 +39,10 @@ const dayDetails = {
     dateLabel: `9 Feb ${year}`,
     unlockAt: new Date(year, 1, 9, 0, 0, 0).toISOString(),
     intro:
-      'Today is for sweet, messy, slightly over-the-top affection—like too much chocolate and not enough self-control.',
+      'Today is for the sweetest person ever. Chocolate day!!!',
     content: [
-      'List the tiny, sweet rituals you share—late night calls, silly memes, comfort shows.',
-      'Note down the “comfort snacks” or drinks that now secretly remind you of her.',
-      'You can later replace this text with specific stories of dates, desserts, or inside jokes.',
+      'You resemble chocolate. I mean in a way where people feel comfort over chocolate, you are just more than that to me. Everytime i come through a chocolate section in shop or when i see a dark chocolate in swiggy, it immediately reminds me of youuuu.',
+      'You know how much i love sweet stuff? may be is it because you???? wahhhh i finally understood why i love them alot (chocolate=sweet, baby=sweet, me=loves sweet) '
     ],
     images: ['/images/pics-days/choco1.png'],
   },
@@ -52,11 +52,10 @@ const dayDetails = {
     dateLabel: `10 Feb ${year}`,
     unlockAt: new Date(year, 1, 10, 0, 0, 0).toISOString(),
     intro:
-      'For everything soft, safe, and a little bit clingy—in other words: this is the “I want to hug you forever” page.',
+      'A soft day!',
     content: [
-      'Write about a hug (real or imagined) that felt like time paused for a second.',
-      'Describe how it feels when you miss her, in the gentlest, most honest words you can find.',
-      'You can also write a little “if I could teleport to you right now…” paragraph.',
+      'Lets buy a teddyy(its already so long since we thought of doing it.)',
+      'But for me, you are the most softest and cutest thing i have ever seen. Theres NO teddy to hug which is better than you. The warmth of your hug is just something else which can make time stop. ',
     ],
     images: ['/images/pics-days/teddy.png'],
   },
@@ -66,11 +65,10 @@ const dayDetails = {
     dateLabel: `11 Feb ${year}`,
     unlockAt: new Date(year, 1, 11, 0, 0, 0).toISOString(),
     intro:
-      'Promises don’t have to be huge to matter—tiny, specific ones are often the most romantic.',
+      'Promises don’t have to be huge or tiny.',
     content: [
-      'List a few soft promises: to listen, to be patient, to send memes when she needs cheering up.',
-      'Add some oddly specific ones that only the two of you would understand.',
-      'Leave space to come back later and add more as your story grows.',
+      'Never really believed in promises but then i met you. I just want to promise you that i will always be there for you no matter what and i just want you to promise that anything happens, you are going to be strong as you always are.You can let situations destroy you or sustain you. But i just want you to know that things will get better and i will always be there for you no matter what.',
+      'I promise to take up nd work on things you always say cuz i believe u know better about me than i do. '
     ],
     images: ['/images/pics-days/prom.png'],
   },
@@ -80,11 +78,11 @@ const dayDetails = {
     dateLabel: `12 Feb ${year}`,
     unlockAt: new Date(year, 1, 12, 0, 0, 0).toISOString(),
     intro:
-      'A warm, slightly squishy reminder that you are someone’s safest place.',
+      'My safest place.',
     content: [
-      'Write about the way you imagine holding her after a long, hard day.',
-      'Describe what calms you down when you think about her: her voice, her presence, her texts.',
-      'Use this as a space to reassure her (and yourself) that you are not going anywhere.',
+      'i dont knowwwwwwww what to write here. I just want to hug you so tight and never let you go.',
+      'Again dont take me too seriously hehehe, but i love you love you sooo much babyyy',
+      'Never knew i could be so easily have a physical touch connection with anyone, but then i met you. Dont get me wrong, i just never knew i could be comfortable with anyone this much (i am still trying to be better with you, than just clingily making you feel awkward.)'
     ],
     images: ['/images/pics-days/hug1.png'],
   },
@@ -94,11 +92,10 @@ const dayDetails = {
     dateLabel: `13 Feb ${year}`,
     unlockAt: new Date(year, 1, 13, 0, 0, 0).toISOString(),
     intro:
-      'For stolen glances, almost-kisses, real kisses, and imaginary ones that already feel real.',
+      'Hehehehheheehehhe',
     content: [
-      'Note down the little moments that felt charged in the softest way.',
-      'Write how you think your first (or next) kiss with her would feel.',
-      'You can also add a playlist link here later—the “I think of you” songs.',
+      'Cute bebuuu, Sorry for randomly kissing you soo many times.....  i think and will work to change into a better person (i will try). i dont even know why i do it..... bababbeyyyyyyyyy',
+      'i miss you alot babyyy... every day, every hour and every minute.'
     ],
     images: ['/images/pics-days/kiss.png'],
   },
@@ -108,11 +105,10 @@ const dayDetails = {
     dateLabel: `14 Feb ${year}`,
     unlockAt: new Date(year, 1, 14, 0, 0, 0).toISOString(),
     intro:
-      'The big page. The one with the words you maybe never said out loud—but always felt.',
+      'Yayyy!! You answered my question as YES?? yyayaya ammooooo vooowh.',
     content: [
-      'Use this space for a long letter: how you met, what changed, and what you quietly wish for.',
-      'You can break it into sections—“you”, “me”, “us”, “future”—and write a little under each.',
-      'Down below, there are two tiny doors: one for her pictures, one for yours together.',
+      'I just love you so much babyyy... i cant even express it in words. You are the most special person in my life and i will always love you no matter what.',
+      'you are something so special to me and my heart, i would never have a person like you.'
     ],
     isFinale: true,
   },
@@ -255,53 +251,55 @@ function DayDetailPage() {
           {detail.isFinale && (
             <div className="mt-5 border-t border-rose-200/40 pt-4">
               <p className="text-xs uppercase tracking-[0.26em] text-rose-400 mb-2">
-                finale extras
+                JUSt LIKE THAT
               </p>
               <p className="text-sm text-rose-700/95 mb-3">
-                When you&apos;re ready, you can split this into sections,
-                attach photos, and turn it into a little archive of your
-                favorite us-moments.
+                a little archive of you and us. (need unlimited space but for now this is it)
               </p>
 
-              <div className="grid gap-3 sm:grid-cols-2">
+              <div className="grid gap-4 sm:grid-cols-2 mt-4">
                 <Link
                   to="/gallery/you"
-                  className="group relative overflow-hidden rounded-xl border border-rose-200/50 bg-rose-50/60 px-4 py-3 text-sm text-rose-800 hover:bg-rose-50/80 transition-colors duration-200"
+                  className="group relative overflow-hidden rounded-xl border border-rose-200/50 bg-white/50 p-6 text-center hover:bg-white/80 transition-all duration-300 hover:shadow-sm"
                 >
-                  <div className="relative z-10 flex items-center gap-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/90 border border-rose-200/50 text-lg">
-                      ✨
-                    </div>
-                    <div>
-                      <p className="font-semibold text-rose-900 text-sm">
-                        you (muse)
-                      </p>
-                      <p className="text-[11px] text-rose-700/95">
-                        A little wall of her photos, or anything that feels like
-                        her.
-                      </p>
+                  <div className="relative z-10 flex flex-col items-center">
+                    <h3 className="font-display text-2xl text-rose-900 mb-1 group-hover:scale-105 transition-transform duration-300 ">
+                      My Bebu
+                    </h3>
+                    <p className="text-[11px] uppercase tracking-widest text-rose-700/70 mb-4">
+                      Just You
+                    </p>
+                    <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-rose-50 border border-rose-100 text-rose-400 group-hover:bg-rose-100 group-hover:text-rose-600 transition-colors">
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
                     </div>
                   </div>
                 </Link>
 
                 <Link
                   to="/gallery/us"
-                  className="group relative overflow-hidden rounded-xl border border-rose-200/50 bg-white/70 px-4 py-3 text-sm text-rose-800 hover:bg-white/90 transition-colors duration-200"
+                  className="group relative overflow-hidden rounded-xl border border-rose-200/50 bg-white/50 p-6 text-center hover:bg-white/80 transition-all duration-300 hover:shadow-sm"
                 >
-                  <div className="relative z-10 flex items-center gap-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/90 border border-rose-200/50 text-lg">
-                      📸
-                    </div>
-                    <div>
-                      <p className="font-semibold text-rose-900 text-sm">
-                        our gallery
-                      </p>
-                      <p className="text-[11px] text-rose-700/95">
-                        Your favorite pictures together, all in one soft place.
-                      </p>
+                  <div className="relative z-10 flex flex-col items-center">
+                    <h3 className="font-display text-2xl text-rose-900 mb-1 group-hover:scale-105 transition-transform duration-300">
+                      Us
+                    </h3>
+                    <p className="text-[11px] uppercase tracking-widest text-rose-700/70 mb-4">
+                      Our Memories
+                    </p>
+                    <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-rose-50 border border-rose-100 text-rose-400 group-hover:bg-rose-100 group-hover:text-rose-600 transition-colors">
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
                     </div>
                   </div>
                 </Link>
+
+                <p className="font-display italic text-sm text-rose-700/95 mt-1 text-center col-span-full">
+                  A little tip - Drag the gallery, tap and enjoy the pics beb!
+                </p>
+
               </div>
             </div>
           )}
