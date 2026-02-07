@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // IMPORTANT: Replace 'val-site' with your actual GitHub repository name
-  base: '/website-ff/',
+  // Only use base path in production (for GitHub Pages)
+  // In development, it uses '/' so routes work normally
+  base: process.env.NODE_ENV === 'production' ? '/website-ff/' : '/',
 })
