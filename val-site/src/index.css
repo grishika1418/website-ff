@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
+/* Define custom theme tokens for Tailwind v4 */
+@theme {
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Outfit", system-ui, sans-serif;
+  --font-accent: "Playfair Display", Georgia, serif;
+
+  /* Custom colors */
+  --color-blush-50: #fef9f7;
+  --color-blush-100: #ffe9e4;
+  --color-blush-200: #ffcac0;
+  --color-blush-300: #ffa092;
+}
+
 @layer base {
   :root {
     background-color: #fef9f7;
@@ -7,16 +20,182 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "kern" 1, "liga" 1;
   }
 
   body {
     margin: 0;
     min-height: 100vh;
+    font-family: "Outfit", system-ui, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.005em;
+    overflow-x: hidden;
+  }
+
+  /* Elegant serif headings with proper weight and spacing */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 600;
+    text-wrap: balance;
+  }
+
+  h1 {
+    letter-spacing: -0.025em;
+  }
+
+  h2 {
+    letter-spacing: -0.02em;
+  }
+
+  h3 {
+    letter-spacing: -0.015em;
+  }
+
+  /* Smooth paragraph text */
+  p {
+    text-wrap: pretty;
+    line-height: 1.7;
+  }
+
+  /* Refined link styling */
+  a {
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  /* Button text refinements */
+  button {
+    font-family: "Outfit", system-ui, sans-serif;
+    letter-spacing: 0.01em;
+  }
+
+  /* Small caps for labels and metadata */
+  .small-caps {
+    font-variant: small-caps;
+    letter-spacing: 0.05em;
+    font-weight: 500;
   }
 }
 
 @layer components {
   .val-bg {
-    @apply min-h-screen w-full relative overflow-hidden;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Typography utility classes */
+  .heading-xl {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 2.25rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+  }
+
+  @media (min-width: 640px) {
+    .heading-xl {
+      font-size: 3rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .heading-xl {
+      font-size: 3.75rem;
+    }
+  }
+
+  .heading-lg {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.875rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  @media (min-width: 640px) {
+    .heading-lg {
+      font-size: 2.25rem;
+    }
+  }
+
+  .heading-md {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+  }
+
+  @media (min-width: 640px) {
+    .heading-md {
+      font-size: 1.875rem;
+    }
+  }
+
+  .heading-sm {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  @media (min-width: 640px) {
+    .heading-sm {
+      font-size: 1.5rem;
+    }
+  }
+
+  .body-lg {
+    font-family: "Outfit", system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.625;
+  }
+
+  @media (min-width: 640px) {
+    .body-lg {
+      font-size: 1.125rem;
+    }
+  }
+
+  .body-md {
+    font-family: "Outfit", system-ui, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.625;
+  }
+
+  @media (min-width: 640px) {
+    .body-md {
+      font-size: 1rem;
+    }
+  }
+
+  .body-sm {
+    font-family: "Outfit", system-ui, sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.625;
+  }
+
+  @media (min-width: 640px) {
+    .body-sm {
+      font-size: 0.875rem;
+    }
+  }
+
+  /* Elegant label styling */
+  .label-elegant {
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+
+  /* Italic accent for romantic emphasis */
+  .italic-accent {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
   }
 }

@@ -6,6 +6,7 @@ const year = new Date().getFullYear()
 const dayDetails = {
   'rose-day': {
     title: 'Rose Day',
+    emoji: '🌹',
     dateLabel: `7 Feb ${year}`,
     unlockAt: new Date(year, 1, 7, 0, 0, 0).toISOString(),
     intro:
@@ -15,9 +16,11 @@ const dayDetails = {
       'Add little bullet points of things you adore about her—how she laughs, how she texts, the way she says your name.',
       'You can also paste in a tiny poem or a screenshot of a moment that felt like someone handing you a flower.',
     ],
+    images: ['/images/pics-days/rose.png'],
   },
   'propose-day': {
     title: 'Propose Day',
+    emoji: '💍',
     dateLabel: `8 Feb ${year}`,
     unlockAt: new Date(year, 1, 8, 0, 0, 0).toISOString(),
     intro:
@@ -27,9 +30,11 @@ const dayDetails = {
       'Write down the exact words you never want to forget, even if they only live here.',
       'Use this as a space to confess something soft, brave, and very you-coded.',
     ],
+    images: ['/images/pics-days/propose.png'],
   },
   'chocolate-day': {
     title: 'Chocolate Day',
+    emoji: '🍫',
     dateLabel: `9 Feb ${year}`,
     unlockAt: new Date(year, 1, 9, 0, 0, 0).toISOString(),
     intro:
@@ -39,9 +44,11 @@ const dayDetails = {
       'Note down the “comfort snacks” or drinks that now secretly remind you of her.',
       'You can later replace this text with specific stories of dates, desserts, or inside jokes.',
     ],
+    images: ['/images/pics-days/choco1.png'],
   },
   'teddy-day': {
     title: 'Teddy Day',
+    emoji: '🧸',
     dateLabel: `10 Feb ${year}`,
     unlockAt: new Date(year, 1, 10, 0, 0, 0).toISOString(),
     intro:
@@ -51,9 +58,11 @@ const dayDetails = {
       'Describe how it feels when you miss her, in the gentlest, most honest words you can find.',
       'You can also write a little “if I could teleport to you right now…” paragraph.',
     ],
+    images: ['/images/pics-days/teddy.png'],
   },
   'promise-day': {
     title: 'Promise Day',
+    emoji: '🤞',
     dateLabel: `11 Feb ${year}`,
     unlockAt: new Date(year, 1, 11, 0, 0, 0).toISOString(),
     intro:
@@ -63,9 +72,11 @@ const dayDetails = {
       'Add some oddly specific ones that only the two of you would understand.',
       'Leave space to come back later and add more as your story grows.',
     ],
+    images: ['/images/pics-days/prom.png'],
   },
   'hug-day': {
     title: 'Hug Day',
+    emoji: '🫂',
     dateLabel: `12 Feb ${year}`,
     unlockAt: new Date(year, 1, 12, 0, 0, 0).toISOString(),
     intro:
@@ -75,9 +86,11 @@ const dayDetails = {
       'Describe what calms you down when you think about her: her voice, her presence, her texts.',
       'Use this as a space to reassure her (and yourself) that you are not going anywhere.',
     ],
+    images: ['/images/pics-days/hug1.png'],
   },
   'kiss-day': {
     title: 'Kiss Day',
+    emoji: '😘',
     dateLabel: `13 Feb ${year}`,
     unlockAt: new Date(year, 1, 13, 0, 0, 0).toISOString(),
     intro:
@@ -87,9 +100,11 @@ const dayDetails = {
       'Write how you think your first (or next) kiss with her would feel.',
       'You can also add a playlist link here later—the “I think of you” songs.',
     ],
+    images: ['/images/pics-days/kiss.png'],
   },
   'valentines-day': {
     title: "Valentine's Day",
+    emoji: '💘',
     dateLabel: `14 Feb ${year}`,
     unlockAt: new Date(year, 1, 14, 0, 0, 0).toISOString(),
     intro:
@@ -154,21 +169,21 @@ function DayDetailPage() {
       <button
         type="button"
         onClick={() => navigate('/days')}
-        className="inline-flex items-center gap-1 rounded-full border border-rose-200/50 bg-white/90 px-3 py-1.5 text-xs text-rose-600 hover:bg-rose-50/90 transition-colors"
+        className="hover:cursor-pointer inline-flex items-center gap-1 rounded-full border border-rose-200/50 bg-white/90 px-3 py-1.5 text-xs text-rose-600 hover:bg-rose-50/90 transition-colors"
       >
-        ← back to the 7 days
+        ← back to all days
       </button>
 
       <section className="relative overflow-hidden rounded-2xl bg-white/70 backdrop-blur-sm border border-rose-200/50 px-5 py-6 sm:px-7 sm:py-7">
         <div className="pointer-events-none absolute inset-0 opacity-70">
-          <div className="h-full w-full bg-[radial-gradient(circle_at_0%_0%,rgba(255,214,214,0.65),transparent_60%),radial-gradient(circle_at_100%_100%,rgba(255,244,228,0.9),transparent_60%)]" />
+          <div className="h-full w-full bg-[radial-gradient(circle_at_0%_0%,rgba(0, 0, 0, 0.65),transparent_60%),radial-gradient(circle_at_100%_100%,rgba(255,244,228,0.9),transparent_60%)]" />
         </div>
 
         <div className="relative z-10 space-y-3">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <div className="flex items-center gap-3">
               <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-white/90 border border-rose-200/50 text-lg">
-                {dayId === 'valentines-day' ? '💘' : '🌹'}
+                {detail.emoji}
               </div>
               <div>
                 <h1 className="font-display text-xl sm:text-2xl text-rose-900">
@@ -180,7 +195,7 @@ function DayDetailPage() {
               </div>
             </div>
 
-            <div className="text-right text-[11px] text-rose-600">
+            {/* <div className="text-right text-[11px] text-rose-600">
               {isUnlocked ? (
                 <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50/70 px-2 py-1 text-[10px] font-semibold text-emerald-700 border border-emerald-200/50">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
@@ -192,7 +207,7 @@ function DayDetailPage() {
                   locked for now • {timeUntil}
                 </span>
               )}
-            </div>
+            </div> */}
           </div>
 
           {!isUnlocked && (
@@ -214,6 +229,28 @@ function DayDetailPage() {
               </p>
             ))}
           </div>
+
+          {/* Image Gallery Section */}
+          {detail.images && detail.images.length > 0 && (
+            <div className="mt-6 flex flex-wrap justify-center gap-4">
+              {detail.images.map((imgSrc, index) => (
+                <div
+                  key={index}
+                  className="relative overflow-hidden rounded-xl border border-rose-100/50 shadow-sm transition-transform hover:scale-[1.02] duration-300 bg-white/50 flex items-center justify-center p-2 h-64 w-64 sm:h-80 sm:w-80"
+                >
+                  <img
+                    src={imgSrc}
+                    alt={`${detail.title} moment ${index + 1}`}
+                    className="h-full w-full object-contain"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      console.error(`Failed to load image: ${imgSrc}`);
+                    }}
+                  />
+                </div>
+              ))}
+            </div>
+          )}
 
           {detail.isFinale && (
             <div className="mt-5 border-t border-rose-200/40 pt-4">

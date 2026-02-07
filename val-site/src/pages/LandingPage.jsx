@@ -79,23 +79,25 @@ function LandingPage() {
         <div className="rounded-2xl bg-white/70 backdrop-blur-sm border border-rose-200/50 px-6 py-7 sm:px-10 sm:py-9 relative">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-center">
             <div className="flex-1 space-y-4 sm:space-y-5">
-              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-rose-900 leading-tight">
+              <h1
+                style={{ fontFamily: '"Instrument Serif", serif' }}
+                className="text-4xl sm:text-5xl md:text-6xl font-normal text-rose-900 leading-tight"
+              >
                 Will you be my
-                <span className="block text-rose-500">valentine?</span>
+                <span className="block text-rose-500 italic">valentine?</span>
               </h1>
 
               <p className="text-sm sm:text-base text-rose-700/85 max-w-md leading-relaxed">
-                No pressure. (umm i mean ofc bebbbu)
+                No pressure. (umm i mean ofc babyy)
               </p>
 
               <div className="flex flex-wrap gap-3 pt-2 items-center">
                 <button
                   type="button"
                   onClick={handleYesClick}
-                  className="inline-flex items-center gap-2 rounded-full bg-rose-500 px-6 py-2.5 text-sm font-semibold text-white hover:bg-rose-600 transition-colors duration-200 shadow-[0_0_20px_rgba(244,63,94,0.4)] hover:shadow-[0_0_25px_rgba(244,63,94,0.5)]"
+                  className="hover:cursor-pointer inline-flex items-center gap-2 rounded-full bg-rose-500 px-6 py-2.5 text-sm font-semibold text-white hover:bg-rose-600 transition-colors duration-200 shadow-[0_0_20px_rgba(244,63,94,0.4)] hover:shadow-[0_0_25px_rgba(244,63,94,0.5)]"
                 >
-                  Yesss, obviously
-                  <span>💘</span>
+                  Yesss, obviously!!
                 </button>
 
                 <button
@@ -105,9 +107,9 @@ function LandingPage() {
                     transform: `scale(${noButtonScale})`,
                     transition: 'transform 0.2s ease-out',
                   }}
-                  className="inline-flex items-center gap-2 rounded-full border border-rose-300/60 bg-white/90 px-5 py-2.5 text-sm font-medium text-rose-700 hover:bg-rose-50/90 transition-colors duration-150"
+                  className="hover:cursor-pointer inline-flex items-center gap-2 rounded-full border border-rose-300/60 bg-white/90 px-5 py-2.5 text-sm font-medium text-rose-700 hover:bg-rose-50/90 transition-colors duration-150"
                 >
-                  No (for now)
+                  No (for now??)
                 </button>
               </div>
             </div>
@@ -128,12 +130,12 @@ function LandingPage() {
                   ) : (
                     <div className="w-32 h-32 sm:w-36 sm:h-36 flex items-center justify-center rounded-xl text-3xl ">
                       <img
-                       src="/images/milk-mocha-sad/sad6.png"
-                       alt="Sad Milk and Mocha"
-                       className="w-32 h-32 sm:w-36 sm:h-36 object-contain transition-opacity duration-300"
-                       onError={(e) => {
-                        e.target.style.display = 'none'
-                      }}
+                        src="/images/milk-mocha-sad/sad6.png"
+                        alt="Sad Milk and Mocha"
+                        className="w-32 h-32 sm:w-36 sm:h-36 object-contain transition-opacity duration-300"
+                        onError={(e) => {
+                          e.target.style.display = 'none'
+                        }}
                       />
                     </div>
                   )}
@@ -156,7 +158,7 @@ function LandingPage() {
             transform: 'translate(-50%, -50%)',
           }}
         >
-          
+
         </div>
       </div>
     </div>

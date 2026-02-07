@@ -7,6 +7,7 @@ const daysConfig = [
   {
     id: 'rose-day',
     label: 'Rose Day',
+    emoji: '🌹',
     dateLabel: `7 Feb ${year}`,
     unlockAt: new Date(year, 1, 7, 0, 0, 0).toISOString(),
     mood: 'soft',
@@ -15,6 +16,7 @@ const daysConfig = [
   {
     id: 'propose-day',
     label: 'Propose Day',
+    emoji: '💍',
     dateLabel: `8 Feb ${year}`,
     unlockAt: new Date(year, 1, 8, 0, 0, 0).toISOString(),
     mood: 'bold',
@@ -23,6 +25,7 @@ const daysConfig = [
   {
     id: 'chocolate-day',
     label: 'Chocolate Day',
+    emoji: '🍫',
     dateLabel: `9 Feb ${year}`,
     unlockAt: new Date(year, 1, 9, 0, 0, 0).toISOString(),
     mood: 'sweet',
@@ -31,6 +34,7 @@ const daysConfig = [
   {
     id: 'teddy-day',
     label: 'Teddy Day',
+    emoji: '🧸',
     dateLabel: `10 Feb ${year}`,
     unlockAt: new Date(year, 1, 10, 0, 0, 0).toISOString(),
     mood: 'soft',
@@ -39,6 +43,7 @@ const daysConfig = [
   {
     id: 'promise-day',
     label: 'Promise Day',
+    emoji: '🤞',
     dateLabel: `11 Feb ${year}`,
     unlockAt: new Date(year, 1, 11, 0, 0, 0).toISOString(),
     mood: 'warm',
@@ -47,6 +52,7 @@ const daysConfig = [
   {
     id: 'hug-day',
     label: 'Hug Day',
+    emoji: '🫂',
     dateLabel: `12 Feb ${year}`,
     unlockAt: new Date(year, 1, 12, 0, 0, 0).toISOString(),
     mood: 'safe',
@@ -55,6 +61,7 @@ const daysConfig = [
   {
     id: 'kiss-day',
     label: 'Kiss Day',
+    emoji: '😘',
     dateLabel: `13 Feb ${year}`,
     unlockAt: new Date(year, 1, 13, 0, 0, 0).toISOString(),
     mood: 'spark',
@@ -63,6 +70,7 @@ const daysConfig = [
   {
     id: 'valentines-day',
     label: "Valentine's Day",
+    emoji: '💘',
     dateLabel: `14 Feb ${year}`,
     unlockAt: new Date(year, 1, 14, 0, 0, 0).toISOString(),
     mood: 'finale',
@@ -128,80 +136,88 @@ function ValentineDaysPage() {
           <p className="text-xs font-medium uppercase tracking-[0.26em] text-rose-400/80 mb-2">
             7 days + 1 finale
           </p>
-          <h2 className="font-display text-2xl sm:text-3xl text-rose-900">
+          <h2
+            style={{ fontFamily: '"Instrument Serif", serif' }}
+            className="text-3xl sm:text-4xl text-rose-900"
+          >
             A little countdown
           </h2>
           <p className="mt-2 text-sm sm:text-base text-rose-700/90 max-w-2xl">
-            Every day has its own tiny universe, some are unlocked while others are waiting for their day.
+            Each day has its own tiny universe. Some are unlocked, while others are waiting for their day.
           </p>
         </section>
 
         <section className="grid gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {daysConfig.map((day) => {
-          const isUnlocked = new Date(day.unlockAt) <= now
-          const timeUntil = isUnlocked ? null : getTimeUntil(day.unlockAt)
+          {daysConfig.map((day) => {
+            const isUnlocked = new Date(day.unlockAt) <= now
+            const timeUntil = isUnlocked ? null : getTimeUntil(day.unlockAt)
 
-          return (
-            <button
-              key={day.id}
-              type="button"
-              onClick={() => {
-                if (isUnlocked) {
-                  navigate(`/days/${day.id}`)
-                }
-              }}
-              className={`group relative overflow-hidden rounded-xl border px-4 py-3.5 sm:px-4 sm:py-4 text-left transition-colors duration-200 ${
-                isUnlocked
-                  ? 'border-rose-200/30 bg-white/70 hover:bg-white/85 hover:border-rose-200/50'
-                  : 'border-rose-200/25 bg-rose-50/40 opacity-75 cursor-default'
-              }`}
-            >
-              <div className="relative z-10 flex items-start gap-2.5 sm:gap-3">
-                <div className="mt-0.5 flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-lg bg-white/90 border border-rose-200/30 text-base sm:text-lg flex-shrink-0">
-                  {day.id === 'valentines-day' ? '💘' : '🌹'}
-                </div>
-
-                <div className="flex-1 min-w-0 space-y-1">
-                  <div className="flex items-start justify-between gap-2">
-                    <h3 className="font-display text-sm sm:text-base font-semibold text-rose-900 leading-tight">
-                      {day.label}
-                    </h3>
-                    <span className="text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.15em] text-rose-400/80 whitespace-nowrap flex-shrink-0">
-                      {day.dateLabel}
-                    </span>
+            return (
+              <button
+                key={day.id}
+                type="button"
+                onClick={() => {
+                  if (isUnlocked) {
+                    navigate(`/days/${day.id}`)
+                  }
+                }}
+                className={`group relative overflow-hidden rounded-xl border px-4 py-3.5 sm:px-4 sm:py-4 text-left transition-all duration-300 ${isUnlocked
+                  ? 'border-rose-200/40 bg-white/80 hover:bg-white/95 hover:border-rose-300/60 shadow-sm hover:cursor-pointer'
+                  : 'border-rose-100/40 bg-white/40 opacity-80 cursor-default grayscale-[0.1]'
+                  }`}
+              >
+                <div className="relative z-10 flex items-start gap-2.5 sm:gap-3">
+                  <div className={`mt-0.5 flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-lg border text-base sm:text-lg flex-shrink-0 transition-colors ${isUnlocked
+                    ? 'bg-rose-50 border-rose-100 text-rose-500'
+                    : 'bg-gray-50 border-gray-100 text-gray-400'
+                    }`}>
+                    {day.emoji}
                   </div>
 
-                  <p className="text-xs sm:text-sm text-rose-700/90 leading-relaxed">
-                    {day.preview}
-                  </p>
+                  <div className="flex-1 min-w-0 space-y-1">
+                    <div className="flex items-start justify-between gap-2">
+                      <h3 className={`font-display text-sm sm:text-base font-semibold leading-tight ${isUnlocked ? 'text-rose-900' : 'text-rose-900/70'
+                        }`}>
+                        {day.label}
+                      </h3>
+                      <span className="text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.15em] text-rose-400/60 whitespace-nowrap flex-shrink-0">
+                        {day.dateLabel}
+                      </span>
+                    </div>
 
-                  <div className="pt-1 flex items-center justify-between text-[10px] sm:text-[11px] text-rose-500/90">
-                    {isUnlocked ? (
-                      <>
-                        <span className="inline-flex items-center gap-1">
-                          <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                          <span className="hidden sm:inline">ready to open</span>
-                          <span className="sm:hidden">ready</span>
-                        </span>
-                        <span className="group-hover:text-rose-700 transition-colors">
-                          tap →
-                        </span>
-                      </>
-                    ) : (
-                      <>
-                        <span className="inline-flex items-center gap-1">
-                          <span className="h-1.5 w-1.5 rounded-full bg-rose-300" />
-                          <span className="hidden sm:inline">locked</span>
-                        </span>
-                        <span className="text-rose-400/80">{timeUntil}</span>
-                      </>
-                    )}
+                    <p className={`text-xs sm:text-sm leading-relaxed ${isUnlocked ? 'text-rose-700/90' : 'text-rose-900/50'
+                      }`}>
+                      {day.preview}
+                    </p>
+
+                    <div className="pt-2 flex items-center justify-between text-[10px] sm:text-[11px]">
+                      {isUnlocked ? (
+                        <>
+                          <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-600 font-medium">
+                            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                            <span>Opened</span>
+                          </span>
+                          <span className="group-hover:translate-x-1 transition-transform text-rose-400 font-medium">
+                            Open →
+                          </span>
+                        </>
+                      ) : (
+                        <div className="flex items-center gap-2 w-full">
+                          <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-stone-100 border border-stone-200 text-stone-500 font-medium">
+                            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                            </svg>
+                            <span>Locked</span>
+                          </span>
+                          <span className="text-rose-300 ml-auto italic">{timeUntil}</span>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </button>
-          )
-        })}
+              </button>
+            )
+          })}
         </section>
       </div>
     </div>
