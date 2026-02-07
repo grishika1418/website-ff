@@ -206,13 +206,13 @@ function DayDetailPage() {
             </div> */}
           </div>
 
-          {!isUnlocked && (
+          {/* {!isUnlocked && (
             <p className="mt-2 text-xs sm:text-sm text-rose-700/90">
               You can pre-write everything here now, but when she visits, this
               page will only open on or after{' '}
               <span className="font-semibold">{detail.dateLabel}</span>.
             </p>
-          )}
+          )} */}
 
           <p className="mt-2 text-sm sm:text-base text-rose-800/95">
             {detail.intro}
