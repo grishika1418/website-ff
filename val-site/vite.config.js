@@ -2,9 +2,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [react()],
   // Only use base path in production (for GitHub Pages)
-  // In development, it uses '/' so routes work normally
-  base: process.env.NODE_ENV === 'production' ? '/website-ff/' : '/',
-})
+  base: mode === 'production' ? '/website-ff/' : '/',
+}))
